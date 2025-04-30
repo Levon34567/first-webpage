@@ -23,8 +23,14 @@ data <- read.csv("chart.csv")
 You can add options to executable code like this
 
 ```{r}
-#| echo: false
-2 * 2
+
+test <- ggplot(data = data, (mapping = aes(x = Date, y = Bitcoin))) +
+  geom_smooth() + 
+  labs(title = "Bitcoin cost increase since 2014 to 2025")
+
+test
+
+
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+The `echo: false` opti  on disables the printing of code (only output is displayed).
